@@ -1,0 +1,30 @@
+# 统一代码风格。ktlint / IDE / CI 都读这份配置。
+# 规则来源：Kotlin 官方风格 + Compose 惯例。
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 4
+
+[*.{kt,kts}]
+max_line_length = 120
+# Compose 的 @Composable 函数是 PascalCase，ktlint 默认按函数命名规则会误报，这里豁免。
+ktlint_function_naming_ignore_when_annotated_with = Composable
+# Compose 函数参数允许单行写多个（默认规则会强制换行，噪音大）。
+ktlint_function_signature_rule_force_multiline_when_parameter_count_greater_or_equal_than = 6
+# 允许 `@Composable` 在接口/expect 里不写返回类型（KMP expect 常见写法）。
+ij_kotlin_allow_trailing_comma = true
+ij_kotlin_allow_trailing_comma_on_call_site = true
+
+[*.{json,json5}]
+indent_size = 2
+
+[*.{yml,yaml}]
+indent_size = 2
+
+[*.md]
+trim_trailing_whitespace = false

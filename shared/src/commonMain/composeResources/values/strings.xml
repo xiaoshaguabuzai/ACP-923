@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Compose Multiplatform 资源（全平台通用）。
+  目录约定：shared/src/commonMain/composeResources/{values,drawable,font,files}
+  生成物：com.acp923.shared.generated.resources.Res（由 compose.resources 配置决定包名）
+  注意：资源名用 snake_case，多语言放到 values-en/、values-zh-rCN/ 等目录。
+-->
+<resources>
+    <string name="app_name">ACP-923</string>
+    <string name="platform_label">运行平台：%1$s</string>
+    <string name="counter_increment">点我 +1</string>
+    <string name="counter_value">当前计数：%1$d</string>
+    <string name="counter_reset">重置</string>
+</resources>
